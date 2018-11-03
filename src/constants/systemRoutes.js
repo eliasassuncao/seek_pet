@@ -1,0 +1,32 @@
+export const SYSTEM_ROUTES = {
+    LOGIN_AUTH_SCREEN: {
+        ROUTE: 'LOGIN_AUTH_SCREEN',
+    },
+    APP_BOTTOM_TAB_NAVIGATOR: {
+        ROUTE: 'APP_BOTTOM_TAB_NAVIGATOR'
+    },
+    MORE_OPTIONS_STACK_NAVIGATOR: {
+        ROUTE: 'MORE_OPTIONS_STACK_NAVIGATOR',
+        BOTTOM_LABEL: 'Mais'
+    },
+    HELP_PET_STACK_NAVIGATOR: {
+        ROUTE: 'HELP_PET_STACK_NAVIGATOR',
+        BOTTOM_LABEL: 'Ajudar'
+    },
+    INFORM_PET_STACK_NAVIGATOR: {
+        ROUTE: 'INFORM_PET_STACK_NAVIGATOR',
+        BOTTOM_LABEL: 'Informar'
+    },
+    REGISTER_PET_SCREEN: {
+        ROUTE: 'REGISTER_PET_SCREEN',
+        HEADER_TITLE: 'Informar sobre um pet'
+    },
+    MORE_OPTIONS_SCREEN: {
+        ROUTE: 'MORE_OPTIONS_SCREEN',
+        HEADER_TITLE: 'Mais'
+    },
+    CHOOSE_HELP_SCREEN: {
+        ROUTE: 'CHOOSE_HELP_SCREEN',
+        HEADER_TITLE: 'Ajude um pet'
+    }
+}
