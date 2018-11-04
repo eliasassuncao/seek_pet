@@ -12,7 +12,7 @@ import {SYSTEM_ROUTES} from "../../constants";
 import { change, Field, reduxForm } from 'redux-form'
 import {TextField} from '../../components'
 
-class ChooseHelp extends Component {
+class ChooseHelpScreen extends Component {
 
    //beje: '#D4A452',
    //verde: '#87A23D'
@@ -33,12 +33,12 @@ class ChooseHelp extends Component {
 
 
 
-ChooseHelp = compose(
+ChooseHelpScreen = compose(
     connect(null, {}),
     reduxForm({
         form: 'LoginAuthScreen',
         enableReinitialize: true,
     }),
-)(ChooseHelp);
+)(ChooseHelpScreen);
 
-export {ChooseHelp}
+export {ChooseHelpScreen}

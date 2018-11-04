@@ -45,6 +45,7 @@ class RegisterPetScreen extends Component {
     }
 
     render() {
+        const { navigation: {navigate}, pristine, submitting} = this.props;
         return (
             <Container>
                 <Content>
@@ -105,7 +106,8 @@ class RegisterPetScreen extends Component {
                             <Button 
                                 full 
                                 style={styles.buttonSubmit} 
-                                onPress={() => console.log("haha")}
+                                //disabled={pristine || submitting}
+                                onPress={() => navigate(SYSTEM_ROUTES.COMPATIBLE_PETS_SCREEN.ROUTE)}
                             >
                                 <Text style={{color: '#ffffff'}}>Informar sobre esse pet</Text>
                             </Button>

@@ -1,6 +1,6 @@
 import React from 'react'
 import {createStackNavigator} from 'react-navigation'
-import {MoreOptionsScreen} from "../screens";
+import {MoreOptionsScreen, HelpAndDonationsScreen, CuponsListScreen} from "../screens";
 import {SYSTEM_ROUTES} from "../constants";
 export const MoreOptionsStackNavigator = createStackNavigator(
     {
@@ -8,6 +8,18 @@ export const MoreOptionsStackNavigator = createStackNavigator(
             screen: MoreOptionsScreen,
             navigationOptions: () => ({
                 title: SYSTEM_ROUTES.MORE_OPTIONS_SCREEN.HEADER_TITLE
+            })
+        },
+        [SYSTEM_ROUTES.HELP_AND_DONATION_SCREEN.ROUTE]: {
+            screen: HelpAndDonationsScreen,
+            navigationOptions: () => ({
+                title: 'Voltar'
+            })
+        },
+        [SYSTEM_ROUTES.CUPONS_LIST_SCREEN.ROUTE]: {
+            screen: CuponsListScreen,
+            navigationOptions: () => ({
+                title: 'Voltar'
             })
         },
         /*

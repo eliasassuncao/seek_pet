@@ -28,5 +28,20 @@ export const SYSTEM_ROUTES = {
     CHOOSE_HELP_SCREEN: {
         ROUTE: 'CHOOSE_HELP_SCREEN',
         HEADER_TITLE: 'Ajude um pet'
-    }
+    },
+    HELP_AND_DONATION_SCREEN: {
+        ROUTE: 'HELP_AND_DONATION_SCREEN',
+    },
+    CUPONS_LIST_SCREEN: {
+        ROUTE: 'CUPONS_LIST_SCREEN'
+    },
+    COMPATIBLE_PETS_SCREEN: {
+        ROUTE: 'COMPATIBLE_PETS_SCREEN'
+    },
+    NEW_CUPOM_SCREEN: {
+        ROUTE: 'NEW_CUPOM_SCREEN'
+    },
+    COMPATIBLE_PET_DETAILS: {
+        ROUTE: 'COMPATIBLE_PET_DETAILS'
+    },
 }

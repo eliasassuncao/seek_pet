@@ -1,12 +1,12 @@
 import React from 'react'
 import {createStackNavigator} from 'react-navigation'
-import {ChooseHelp} from "../screens";
+import {ChooseHelpScreen} from "../screens";
 import {SYSTEM_ROUTES} from "../constants";
 
 export const HelpPetNavigator = createStackNavigator(
     {
         [SYSTEM_ROUTES.CHOOSE_HELP_SCREEN.ROUTE]: {
-            screen: ChooseHelp,
+            screen: ChooseHelpScreen,
             navigationOptions: () => ({
                 title: SYSTEM_ROUTES.CHOOSE_HELP_SCREEN.HEADER_TITLE
             })
