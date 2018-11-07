@@ -9,14 +9,6 @@ import { connect } from 'react-redux'
 import {SYSTEM_ROUTES} from "../../constants";
 
 class MoreOptionsScreen extends Component {
-    _onLogout() {
-        /*
-        this.props.logout()
-            .then(() => {
-                this.props.navigation.navigate(SYSTEM_ROUTES.BE_A_BRANCH_SCREEN.ROUTE)
-            })
-         */
-    }
 
     render() {
         const {navigation: {navigate}, handleSubmit, submitting, pristine} = this.props;
@@ -24,7 +16,7 @@ class MoreOptionsScreen extends Component {
             <Container>
                 <Content>
                     <ListItem
-                        onPress={() => console.log('haha')}
+                        onPress={() => navigate(SYSTEM_ROUTES.REGISTER_ACCOUNT_SCREEN.ROUTE)}
                         style={styles.listItem}
                         icon
                     >
@@ -67,8 +59,9 @@ class MoreOptionsScreen extends Component {
                     </ListItem>
                     <ListItem
                         style={styles.listItem}
+                        button
                         icon
-                        onPress={this._onLogout}
+                        onPress={() => navigate(SYSTEM_ROUTES.LOGIN_AUTH_SCREEN.ROUTE)}
                     >
                         <Left>
                             <Button style={styles.iconColor}>

@@ -32,7 +32,7 @@ class LoginAuthScreen extends Component {
                 <Content>
                     <View style={styles.container}>
                          <View style={styles.viewButtonRegister}>
-                            <Button iconRight transparent style={styles.buttonRegister}>
+                            <Button iconRight transparent style={styles.buttonRegister} onPress={() => navigate(SYSTEM_ROUTES.REGISTER_ACCOUNT_SCREEN.ROUTE)}>
                                 <Text style={styles.textRegister}>Cadastrar</Text>
                                 <Icon style={styles.iconRegister} type="MaterialIcons" name="chevron-right"/>
                             </Button>

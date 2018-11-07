@@ -36,7 +36,7 @@ export const AppBottomTabNavigator = createMaterialBottomTabNavigator(
         },
     },
     {
-        initialRouteName: SYSTEM_ROUTES.INFORM_PET_STACK_NAVIGATOR.ROUTE,
+        initialRouteName: SYSTEM_ROUTES.HELP_PET_STACK_NAVIGATOR.ROUTE,
         navigationOptions: {
             activeTintColor: '#ffffff',
             barStyle: { backgroundColor: '#D4A452' },

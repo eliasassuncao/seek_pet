@@ -1,6 +1,6 @@
 import React from 'react'
 import {createStackNavigator} from 'react-navigation'
-import {MoreOptionsScreen, HelpAndDonationsScreen, CuponsListScreen} from "../screens";
+import {MoreOptionsScreen, HelpAndDonationsScreen, CuponsListScreen, RegisterAccountScreen} from "../screens";
 import {SYSTEM_ROUTES} from "../constants";
 export const MoreOptionsStackNavigator = createStackNavigator(
     {
@@ -22,6 +22,13 @@ export const MoreOptionsStackNavigator = createStackNavigator(
                 title: 'Voltar'
             })
         },
+        [SYSTEM_ROUTES.REGISTER_ACCOUNT_SCREEN.ROUTE]: {
+            screen: RegisterAccountScreen,
+            navigationOptions: () => ({
+                title: 'Voltar'
+            })
+        },
+
         /*
         [SYSTEM_ROUTES.SEARCH_SELECT_SCREEN.ROUTE]: {
             screen: SearchSelectScreen,
