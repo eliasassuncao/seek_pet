@@ -31,7 +31,7 @@ export const InformPetNavigator = createStackNavigator(
         },
     },
     {
-        initialRouteName: SYSTEM_ROUTES.COMPATIBLE_PET_DETAILS.ROUTE,
+        initialRouteName: SYSTEM_ROUTES.REGISTER_PET_SCREEN.ROUTE,
 
         navigationOptions: {
             headerBackTitle: 'Voltar',

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {Body, Button, Container, Content, Icon, Left, ListItem, Text, Right, Thumbnail} from 'native-base'
-import {View} from 'react-native'
+import {View, TouchableOpacity} from 'react-native'
 import styles from './styles'
 import { compose } from "redux";
 import _ from 'lodash'
@@ -35,8 +35,8 @@ class CompatiblePetsScreen extends Component {
                         </View>
                     </View>
                     {
-                        _.map(arr, item => (
-                             <ListItem thumbnail>
+                        _.map(arr, (item, index) => (
+                             <ListItem button thumbnail onPress={() => navigate(SYSTEM_ROUTES.COMPATIBLE_PET_DETAILS.ROUTE)} key={index}>
                                 <Left>
                                     <Thumbnail square source={{ uri: item.url}} />
                                 </Left>
