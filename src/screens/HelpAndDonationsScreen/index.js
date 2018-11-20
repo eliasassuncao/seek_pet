@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {Body, Button, Container, Content, Icon, Left, ListItem, Text, Right, Thumbnail} from 'native-base'
-import {View} from 'react-native'
+import {View, Image} from 'react-native'
 import styles from './styles'
 import { compose } from "redux";
 import _ from 'lodash'
@@ -11,12 +11,12 @@ const arr = [
     {
         type: 'Cachorro em perigo',
         date: '13/02/2017 20h15',
-        url: 'https://static.thenounproject.com/png/13421-200.png'
+        url: require('../../../public/images/iconGreen.jpg')
     },
     {
         type: 'Precisando de socorro',
         date: '13/02/2017 20h15',
-        url: 'https://static.thenounproject.com/png/13421-200.png'
+        url: require('../../../public/images/iconGreen.jpg')
     }
 ]
 class HelpAndDonationsScreen extends Component {
@@ -37,7 +37,11 @@ class HelpAndDonationsScreen extends Component {
                         _.map(arr, (item, index) => (
                              <ListItem thumbnail key={index}>
                                 <Left>
-                                    <Thumbnail square source={{ uri: item.url}} />
+                                    <Image 
+                                        resizeMode='contain' 
+                                        style={{width: 80, height: 80}} 
+                                        source={item.url} 
+                                    />
                                 </Left>
                                 <Body>
                                     <Text style={styles.bodyText}>{item.type}</Text>

@@ -23,7 +23,7 @@ export default StyleSheet.create({
         width: '100%'
     },
     buttonRegister: {
-        marginLeft: 200
+        marginLeft: 250
     },
     textRegister: {
         color: '#9F9F9F'

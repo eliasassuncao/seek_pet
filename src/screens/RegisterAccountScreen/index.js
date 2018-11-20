@@ -2,13 +2,11 @@ import React, {Component} from 'react';
 import {
     View,
     Image,
-    SafeAreaView
 } from 'react-native';
 import styles from './styles'
 import {compose} from "redux";
 import {connect} from 'react-redux'
-import {Text, Button, Icon, Form, Item, Label, Input, Container,Content, Thumbnail
-} from "native-base";
+import {Text, Button, Icon, Form, Item, Label, Input, Container,Content, Thumbnail} from "native-base";
 import {SYSTEM_ROUTES} from "../../constants";
 import { change, Field, reduxForm } from 'redux-form'
 import {TextField, PickerList} from '../../components'
@@ -53,9 +51,10 @@ class RegisterAccountScreen extends Component {
                     <View style={styles.container}>
                         <Form style={styles.form}>
                             <View style={{marginTop: 20, display: 'flex', alignItems: 'center'}}>
-                                <Thumbnail 
-                                    large 
-                                    source={{uri: 'https://cache.olhardigital.com.br/uploads/acervo_imagens/2014/12/20141204130826_660_420.jpg'}} 
+                                <Image 
+                                    resizeMode='contain' 
+                                    style={{width: 120, height: 120}} 
+                                    source={require('../../../public/images/profile.png')}
                                 />
                             </View>
                             <Field
@@ -103,8 +102,8 @@ class RegisterAccountScreen extends Component {
                                 label="País"
                                 arrItens={[
                                     {label: 'Selecione', value: null},
-                                    {label: 'País 1', value: 1},
-                                    {label: 'País 2', value: 2}
+                                    {label: 'Brasil', value: 1},
+                                    {label: 'Argentina', value: 2},
                                 ]}
                                 validate={requiredValidation}
                             />
@@ -114,8 +113,8 @@ class RegisterAccountScreen extends Component {
                                 label="Estado"
                                 arrItens={[
                                     {label: 'Selecione', value: ''},
-                                    {label: 'Estado 1', value: 'M'},
-                                    {label: 'Estado 2', value: 'F'}
+                                    {label: 'São Paulo', value: 'M'},
+                                    {label: 'Rio de Janeiro', value: 'F'}
                                 ]}
                                 validate={requiredValidation}
                             />
@@ -125,8 +124,8 @@ class RegisterAccountScreen extends Component {
                                 label="Cidade"
                                 arrItens={[
                                     {label: 'Selecione', value: ''},
-                                    {label: 'Cidade 1', value: 'M'},
-                                    {label: 'Cidade 2', value: 'F'}
+                                    {label: 'Ribeirão Preto', value: 'M'},
+                                    {label: 'Cravinhos', value: 'F'}
                                 ]}
                                 validate={requiredValidation}
                             />

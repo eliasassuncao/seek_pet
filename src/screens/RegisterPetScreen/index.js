@@ -7,7 +7,7 @@ import {
 import styles from './styles'
 import {compose} from "redux";
 import {connect} from 'react-redux'
-import {Text, Button, Icon, Form, Item, Label, Input, Container,Content} from "native-base";
+import {Text, Button, Icon, Form, Item, Label, Input, Container,Content, Card, CardItem} from "native-base";
 import {SYSTEM_ROUTES} from "../../constants";
 import { change, Field, reduxForm } from 'redux-form'
 import {TextField, PickerList} from '../../components'
@@ -50,6 +50,15 @@ class RegisterPetScreen extends Component {
             <Container>
                 <Content>
                     <View style={styles.container}>
+                        <Card style={{marginLeft: 20, marginRight: 20, width: 220, marginTop: 20}}>
+                            <CardItem cardBody>
+                                <Image 
+                                    source={require('../../../public/images/petupload.jpg')}
+                                    style={{height: 180, width: 180, flex: 1}}
+                                    resizeMode="contain"
+                                />
+                            </CardItem> 
+                        </Card>
                         <Form style={styles.form}>
                             <Field
                                 label="Título"

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import {Body, Button, Container, Content, Icon, Left, ListItem, Text, Right, Thumbnail} from 'native-base'
-import {View} from 'react-native'
+import {Body, Button, Container, Content, Text,} from 'native-base'
+import {View, Image} from 'react-native'
 import styles from './styles'
 import { compose } from "redux";
 import _ from 'lodash'
@@ -15,10 +15,10 @@ class NewCupomScreen extends Component {
             <Container>
                 <Content>
                     <View style={styles.container}>
-                        <Thumbnail 
-                            large 
-                            source={{ uri: 'https://static.thenounproject.com/png/13421-200.png'}}
+                        <Image 
+                            source={require('../../../public/images/icon.jpg')}
                             style={styles.image}
+                            resizeMode="contain"
                         />
                         <Text style={styles.textCongratulations}>Meus parabéns!</Text>
                         <View style={styles.viewBody}>

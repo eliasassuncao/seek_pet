@@ -60,7 +60,7 @@ class RegisterHelpScreen extends Component {
                         <Card style={{marginLeft: 20, marginRight: 20}}>
                             <CardItem cardBody>
                                 <Image 
-                                    source={{uri: 'https://www.petz.com.br/blog/wp-content/uploads/2017/11/pitbull-01.jpg'}} 
+                                    source={require('../../../public/images/pitbull.jpg')}
                                     style={{height: 200, width: null, flex: 1}}
                                 />
                             </CardItem> 

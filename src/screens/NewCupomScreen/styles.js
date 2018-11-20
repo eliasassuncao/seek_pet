@@ -20,7 +20,10 @@ export default StyleSheet.create({
         fontSize: 16
     },
     image: {
-        marginTop: 20
+        height: 100,
+        width: 100,
+        flex: 1, 
+        marginTop: 10
     },
     viewTextCupom: {
         display: 'flex', 

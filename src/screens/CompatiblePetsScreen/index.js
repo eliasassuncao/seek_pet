@@ -11,12 +11,12 @@ const arr = [
     {
         type: 'Cachorro em perigo',
         date: '13/02/2017 20h15',
-        url: 'https://static.thenounproject.com/png/13421-200.png'
+        url: require('../../../public/images/pitbull.jpg')
     },
     {
         type: 'Precisando de socorro',
         date: '13/02/2017 20h15',
-        url: 'https://static.thenounproject.com/png/13421-200.png'
+        url: require('../../../public/images/pitbull.jpg')
     }
 ]
 class CompatiblePetsScreen extends Component {
@@ -38,7 +38,7 @@ class CompatiblePetsScreen extends Component {
                         _.map(arr, (item, index) => (
                              <ListItem button thumbnail onPress={() => navigate(SYSTEM_ROUTES.COMPATIBLE_PET_DETAILS.ROUTE)} key={index}>
                                 <Left>
-                                    <Thumbnail square source={{ uri: item.url}} />
+                                    <Thumbnail source={item.url} />
                                 </Left>
                                 <Body>
                                     <Text style={styles.bodyText}>{item.type}</Text>

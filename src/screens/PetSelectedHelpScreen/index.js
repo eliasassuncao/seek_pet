@@ -36,9 +36,6 @@ const arr = [
 
 class PetSelectedHelpScreen extends Component {
 
-    //D4A452 BEJE
-    //9F9F9F cinza
-    //87A23D verde
     render() {
         const {navigation: {navigate}, handleSubmit, submitting, pristine} = this.props;
         return (
@@ -48,7 +45,7 @@ class PetSelectedHelpScreen extends Component {
                         <Card style={{marginLeft: 20, marginRight: 20}}>
                             <CardItem cardBody>
                                 <Image 
-                                    source={{uri: 'https://www.petz.com.br/blog/wp-content/uploads/2017/11/pitbull-01.jpg'}} 
+                                    source={require('../../../public/images/pitbull.jpg')}
                                     style={{height: 200, width: null, flex: 1}}
                                 />
                             </CardItem> 

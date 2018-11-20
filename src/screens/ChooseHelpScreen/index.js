@@ -25,7 +25,7 @@ class ChooseHelpScreen extends Component {
                         <Text style={{fontSize: 15, color: '#9F9F9F'}}>um deles para ajudar.</Text>
                         <TouchableOpacity onPress={() => this.props.navigation.navigate(SYSTEM_ROUTES.PET_SELECTED_HELP_SCREEN.ROUTE)}>
                             <Image
-                                style={{width: 300,height: 300}}
+                                style={{width: 500,height: 440, marginTop: 10}}
                                 source={require('../../../public/images/map.png')}
                                 resizeMode='contain'
                             />
