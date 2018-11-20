@@ -133,7 +133,7 @@ class RegisterAccountScreen extends Component {
                                 full 
                                 style={styles.buttonSubmit} 
                                 //disabled={pristine || submitting}
-                                onPress={() => navigate(SYSTEM_ROUTES.COMPATIBLE_PETS_SCREEN.ROUTE)}
+                                onPress={() => navigate(SYSTEM_ROUTES.MORE_OPTIONS_SCREEN.ROUTE)}
                             >
                                 <Text style={{color: '#ffffff'}}>Salvar</Text>
                             </Button>

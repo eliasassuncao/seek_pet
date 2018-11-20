@@ -100,7 +100,10 @@ class CompatiblePetDetailsScreen extends Component {
                     </View>
                     <View style={{display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: 10, marginBottom: 10}}>
                         <View> 
-                            <Button style={{backgroundColor: '#D4A452'}} >
+                            <Button 
+                                style={{backgroundColor: '#D4A452'}} 
+                                onPress={() => navigate(SYSTEM_ROUTES.GATHER_INFORMATION_COMPATIBLE_SCREEN.ROUTE)}
+                            >
                                 <Text style={{color: '#ffffff'}}>Pet compatível</Text>
                             </Button>
                         </View>

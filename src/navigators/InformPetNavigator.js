@@ -1,7 +1,13 @@
 import React from 'react'
 import {createStackNavigator} from 'react-navigation'
 import {SYSTEM_ROUTES} from "../constants";
-import { RegisterPetScreen, CompatiblePetsScreen, NewCupomScreen, CompatiblePetDetailsScreen } from '../screens';
+import { 
+    RegisterPetScreen, 
+    CompatiblePetsScreen, 
+    NewCupomScreen, 
+    CompatiblePetDetailsScreen,
+    GatherInformationCompatibleScreen
+} from '../screens';
 
 export const InformPetNavigator = createStackNavigator(
     {
@@ -29,6 +35,12 @@ export const InformPetNavigator = createStackNavigator(
                 title: 'Voltar'
             })
         },
+        [SYSTEM_ROUTES.GATHER_INFORMATION_COMPATIBLE_SCREEN.ROUTE]: {
+            screen: GatherInformationCompatibleScreen,
+            navigationOptions: () => ({
+                title: 'Voltar'
+            }) 
+        }
     },
     {
         initialRouteName: SYSTEM_ROUTES.REGISTER_PET_SCREEN.ROUTE,
