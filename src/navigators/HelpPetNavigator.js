@@ -1,6 +1,12 @@
 import React from 'react'
 import {createStackNavigator} from 'react-navigation'
-import {ChooseHelpScreen, PetSelectedHelpScreen, RegisterHelpScreen, NewCupomScreen} from "../screens";
+import {
+    ChooseHelpScreen, 
+    PetSelectedHelpScreen, 
+    RegisterHelpScreen, 
+    NewCupomScreen,
+    PetAdoptedScreen
+} from "../screens";
 import {SYSTEM_ROUTES} from "../constants";
 
 export const HelpPetNavigator = createStackNavigator(
@@ -25,6 +31,12 @@ export const HelpPetNavigator = createStackNavigator(
         },
         [SYSTEM_ROUTES.PET_SELECTED_HELP_SCREEN.ROUTE]: {
             screen: PetSelectedHelpScreen,
+            navigationOptions: () => ({
+                title: 'Voltar'
+            })
+        },
+        [SYSTEM_ROUTES.PET_ADOPTED_SCREEN.ROUTE]: {
+            screen: PetAdoptedScreen,
             navigationOptions: () => ({
                 title: 'Voltar'
             })

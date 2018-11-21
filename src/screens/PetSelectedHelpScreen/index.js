@@ -18,6 +18,7 @@ import { compose } from "redux";
 import _ from 'lodash'
 import { connect } from 'react-redux'
 import {SYSTEM_ROUTES} from "../../constants";
+import Modal from "react-native-modal";
 
 const arr = [
     {
@@ -36,11 +37,55 @@ const arr = [
 
 class PetSelectedHelpScreen extends Component {
 
+    state = {
+        isVisible: false
+    };
+
+    constructor(props) {
+        super(props);
+        this._modalClose = this._modalClose.bind(this);
+        this._modalOpen = this._modalOpen.bind(this);
+    }
+
+    _modalClose() {
+        this.setState({isVisible: false})
+    }
+
+    _modalOpen() {
+        this.setState({isVisible: true})
+    }
+
     render() {
         const {navigation: {navigate}, handleSubmit, submitting, pristine} = this.props;
         return (
             <Container>
                 <Content>
+                    <Modal
+                        onBackdropPress={this._modalClose}
+                        isVisible={this.state.isVisible}
+                    >
+                        <Card>
+                            <CardItem style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                                <Text style={{textAlign: 'center', marginBottom: 10, color: '#D4A452', fontSize: 20, fontWeight: '500'}}>Você vai mesmo adotar?</Text>
+                                <Text style={{textAlign: 'center', fontSize: 15, color: '#9F9F9F'}}>Ficamos muito felizes com sua adoção,</Text>
+                                <Text style={{textAlign: 'center', fontSize: 15, color: '#9F9F9F'}}>porém queremos te lembrar que esse</Text>
+                                <Text style={{textAlign: 'center', fontSize: 15, color: '#9F9F9F'}}>pet já pode ter dono.</Text> 
+                                <Text style={{textAlign: 'center', fontSize: 15, color: '#9F9F9F', marginTop: 10}}>Vamos deixar esse pet mais 48 horas</Text>
+                                <Text style={{textAlign: 'center', fontSize: 15, color: '#9F9F9F'}}>no aplicaivo caso ele apareça.</Text>
+                                <View style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                                    <Button 
+                                        style={{backgroundColor: '#87A23D', marginTop: 10}} 
+                                        onPress={() => {
+                                            this._modalClose()
+                                            navigate(SYSTEM_ROUTES.PET_ADOPTED_SCREEN.ROUTE)
+                                        }}
+                                    >
+                                        <Text style={{color: '#ffffff'}}>Adotar mesmo assim</Text>
+                                    </Button>
+                                </View>
+                            </CardItem>
+                        </Card>
+                    </Modal>
                     <View style={{marginTop: 20, borderBottomWidth: 1, borderBottomColor: '#e6e4e4'}}>
                         <Card style={{marginLeft: 20, marginRight: 20}}>
                             <CardItem cardBody>
@@ -102,7 +147,10 @@ class PetSelectedHelpScreen extends Component {
                                 >
                                 <Text style={{color: '#ffffff'}}>Ajude esse pet agora</Text>
                             </Button>
-                            <Button style={{backgroundColor: '#87A23D', marginTop: 10}} >
+                            <Button 
+                                style={{backgroundColor: '#87A23D', marginTop: 10}} 
+                                onPress={() => this._modalOpen()}
+                            >
                                 <Text style={{color: '#ffffff'}}>Adote esse pet agora</Text>
                             </Button>
                         </View>
